@@ -45,6 +45,12 @@ public class DFS : MonoBehaviour
             if (edge.to.index == Target.index)
             {
                 CalculatedPath = CalculatePath(Source, Target);
+                for (int i = 0; i < CalculatedPath.Count -1; i++)
+                {
+                    Debug.DrawLine(Map.Nodes[CalculatedPath[i+1]].transform.position, Map.Nodes[CalculatedPath[i+4]].transform.position,Color.red, 2.0f);
+                    // This draws the line (Somewhat poorly if you add a number more than one but heyho)
+                    //From what Ive been testing out, it does a path via how many lines I put in next to the Array and it gets really scruffy.
+                }
                 return true;   //This is where I aim to generate the path and for it to come out true
             }
             for (int i = 0; i < edge.to.AdjacencyList.Length; i++)
@@ -54,3 +60,5 @@ public class DFS : MonoBehaviour
         return false;
     }
 }
+//Note, even though I understand this now, most of it was cause of the help of Kirean, Work on it when you get home, it does lines now but not very well
+//What Im trying to say is it does lines but does it poorly
