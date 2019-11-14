@@ -10,6 +10,7 @@ public class BFS : MonoBehaviour
     public List<int> CalculatedPath = new List<int>();  //Makes Path work
     public Graph Map;
     public List<int> CalculatePath(GraphNode Source, GraphNode Target) //Coding the route
+
     {
         List<int> Path = new List<int>();
         int currentNode = Target.index;
@@ -21,9 +22,10 @@ public class BFS : MonoBehaviour
         }
         return Path;
     }
-    public bool CalculateRoute(GraphNode Source, GraphNode Target)
+
+    public bool CalculateRoute(GraphNode Source, GraphNode Target) //These are the arguements
     {
-        Stack<GraphEdge> graphEdges = new Stack<GraphEdge>(); //Thats the stack
+        Queue<GraphEdge> graphEdges = new Queue<GraphEdge>(); //Thats the stack
         Route = new List<int>(Map.Nodes.Count);
         Visited = new List<bool>(Map.Nodes.Count);
         for (int i = 0; i < Map.Nodes.Count; i++)// Looping through the map node
@@ -31,15 +33,15 @@ public class BFS : MonoBehaviour
             Route.Add(-10);
             Visited.Add(false); //This initalises both the lists, 
         }
-        for (int i = 0; i < Source.AdjacencyList.Length; i++) //LIFO
-            graphEdges.Push(Source.AdjacencyList[i]); //Adding all the adjactency edges to the start node
+        for (int i = 0; i < Source.AdjacencyList.Length; i++) //FIFO
+            graphEdges.Enqueue(Source.AdjacencyList[i]); //Adding all the adjactency edges to the start node
         Visited[Source.index] = true;
         while (graphEdges.Count > 0)
         {
-            GraphEdge edge = graphEdges.Pop();
+            GraphEdge edge = graphEdges.Dequeue();
             Route[edge.to.index] = edge.from.index;
             Visited[edge.to.index] = true;
-            for (int i = 0; i < Source.AdjacencyList.Length; i++) //Attempting LIFO, Arrays have .length rather than .count
+            for (int i = 0; i < Source.AdjacencyList.Length; i++) //Attempting FIFO, Arrays have .length rather than .count
                 Visited[edge.to.index] = true;
 
             if (edge.to.index == Target.index)
@@ -55,10 +57,11 @@ public class BFS : MonoBehaviour
             }
             for (int i = 0; i < edge.to.AdjacencyList.Length; i++)
                 if (!Visited[edge.to.AdjacencyList[i].to.index])
-                    graphEdges.Push(edge.to.AdjacencyList[i]);
+                    graphEdges.Enqueue(edge.to.AdjacencyList[i]);
         }
         return false;
     }
 }
-//Note, even though I understand this now, most of it was cause of the help of Kirean, Work on it when you get home, it does lines now but not very well
-//What Im trying to say is it does lines but does it poorly
+
+// I literally needed to change all the LIFO stuff to FIFO stuff.... FUCK SAKE I TOOK 4 hours on this shit man all the Stack stuff had to be changed to Queue.... FUCK CODING MAN
+

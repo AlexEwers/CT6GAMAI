@@ -11,8 +11,7 @@ public class DFS : MonoBehaviour
     public List<int> CalculatedPath = new List<int>();  //Makes Path work
     public Graph Map;
     public List<int> CalculatePath(GraphNode Source, GraphNode Target) //Coding the route
-   
- {
+    {
         List<int> Path = new List<int>();
         int currentNode = Target.index;
         Path.Add(currentNode);
@@ -23,43 +22,44 @@ public class DFS : MonoBehaviour
         }
         return Path;
     }
-
-    GraphEdge FindShortestPathBFS(GraphEdge startPosition, GraphEdge goalPosition)
+    public bool CalculateRoute(GraphNode Source, GraphNode Target)
     {
-        Queue<GraphEdge> queue = new Queue<GraphEdge>();
-        HashSet<GraphEdge> exploredNodes = new HashSet<GraphEdge>(); //Start state, and stops it doing it m
-        queue.Enqueue(startPosition);
-
-        while (queue.Count != 0)
+        Stack<GraphEdge> graphEdges = new Stack<GraphEdge>(); //Thats the stack
+        Route = new List<int>(Map.Nodes.Count);
+        Visited = new List<bool>(Map.Nodes.Count);
+        for (int i = 0; i < Map.Nodes.Count; i++)// Looping through the map node
         {
-            GraphEdge currentNode = queue.Dequeue();
-            if (currentNode == goalPosition)
-            {
-                return currentNode;
-            }
-            IList<GraphEdge> nodes = GetWalkableNodes(currentNode);
-
-            foreach(GraphEdge node in nodes)
-            {
-                if(!exploredNodes.Contains(node))
-                {
-                    exploredNodes.Add(node);
-
-                  nodeParents.Add(node, currentNode);
-
-                    queue.Enqueue(node);
-                }
-            }
+            Route.Add(-10);
+            Visited.Add(false); //This initalises both the lists, 
         }
-        return startPosition;
-    }
+        for (int i = 0; i < Source.AdjacencyList.Length; i++) //LIFO
+            graphEdges.Push(Source.AdjacencyList[i]); //Adding all the adjactency edges to the start node
+        Visited[Source.index] = true;
+        while (graphEdges.Count > 0)
+        {
+            GraphEdge edge = graphEdges.Pop();
+            Route[edge.to.index] = edge.from.index;
+            Visited[edge.to.index] = true;
+            for (int i = 0; i < Source.AdjacencyList.Length; i++) //Attempting LIFO, Arrays have .length rather than .count
+                Visited[edge.to.index] = true;
 
-    private IList<GraphEdge> GetWalkableNodes(GraphEdge currentNode)
-    {
-        throw new NotImplementedException();
+            if (edge.to.index == Target.index)
+            {
+                CalculatedPath = CalculatePath(Source, Target);
+                for (int i = 0; i < CalculatedPath.Count - 1; i++)
+                {
+                    Debug.DrawLine(Map.Nodes[CalculatedPath[i]].transform.position, Map.Nodes[CalculatedPath[i + 1]].transform.position, Color.red, 2.0f);
+                    // This draws the line (Somewhat poorly if you add a number more than one but heyho)
+                    //From what Ive been testing out, it does a path via how many lines I put in next to the Array and it gets really scruffy.
+                }
+                return true;   //This is where I aim to generate the path and for it to come out true
+            }
+            for (int i = 0; i < edge.to.AdjacencyList.Length; i++)
+                if (!Visited[edge.to.AdjacencyList[i].to.index])
+                    graphEdges.Push(edge.to.AdjacencyList[i]);
+        }
+        return false;
     }
 }
-
-
 //Note, even though I understand this now, most of it was cause of the help of Kirean, Work on it when you get home, it does lines now but not very well
 //What Im trying to say is it does lines but does it poorly

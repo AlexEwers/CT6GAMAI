@@ -1,5 +1,5 @@
 sceneSetups:
-- path: D:/UP815962/PathfindingBasics-master/Assets/Pathfinding2D.unity
+- path: Assets/Attempt 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
