@@ -48,7 +48,6 @@ public class DFS : MonoBehaviour
                 CalculatedPath = CalculatePath(Source, Target);
                 for (int i = 0; i < CalculatedPath.Count - 1; i++)
                 {
-                    Debug.DrawLine(Map.Nodes[CalculatedPath[i]].transform.position, Map.Nodes[CalculatedPath[i + 1]].transform.position, Color.red, 2.0f);
                     // This draws the line (Somewhat poorly if you add a number more than one but heyho)
                     //From what Ive been testing out, it does a path via how many lines I put in next to the Array and it gets really scruffy.
                 }

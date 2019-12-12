@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Graph : MonoBehaviour
 {
+    public static Graph Map;
     public List<GraphNode> Nodes = new List<GraphNode>();
-    public GraphNode Source, Target;
     List<int> Path = new List<int>();
-    public DFS dFS;
+    public BFS bfs;
     public bool RouteCalculated, PathCalculated;
     //The list is here that has all the nodes
     // Start is called before the first frame update
-
+    private void Awake()
+    {
+        Map = this;
+    }
     void Start()
     {
         int i = 0;
@@ -26,9 +29,6 @@ public class Graph : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!RouteCalculated)
-            RouteCalculated = dFS.CalculateRoute(Source, Target);
-
-    
+        Map = this;
     }
 }

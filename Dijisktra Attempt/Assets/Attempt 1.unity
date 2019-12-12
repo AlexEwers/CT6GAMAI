@@ -152,12 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 27161408}
     to: {fileID: 2129462814}
   - from: {fileID: 27161408}
     to: {fileID: 280484400}
   index: 21
+  walkable: 1
 --- !u!65 &27161409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -263,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 39588431}
     to: {fileID: 2143332709}
@@ -271,6 +274,7 @@ MonoBehaviour:
   - from: {fileID: 39588431}
     to: {fileID: 1080101649}
   index: 5
+  walkable: 1
 --- !u!65 &39588432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -376,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 95826158}
     to: {fileID: 402199470}
@@ -386,6 +391,7 @@ MonoBehaviour:
   - from: {fileID: 95826158}
     to: {fileID: 1273872225}
   index: 6
+  walkable: 1
 --- !u!65 &95826159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -491,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 194074447}
     to: {fileID: 563649455}
@@ -501,6 +508,7 @@ MonoBehaviour:
   - from: {fileID: 194074447}
     to: {fileID: 320619170}
   index: 15
+  walkable: 1
 --- !u!65 &194074448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -606,6 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 273248720}
     to: {fileID: 1560098451}
@@ -614,6 +623,7 @@ MonoBehaviour:
   - from: {fileID: 273248720}
     to: {fileID: 1506292116}
   index: 20
+  walkable: 1
 --- !u!65 &273248721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -719,6 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 280484400}
     to: {fileID: 27161408}
@@ -727,6 +738,7 @@ MonoBehaviour:
   - from: {fileID: 280484400}
     to: {fileID: 1116140992}
   index: 13
+  walkable: 1
 --- !u!65 &280484401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -800,6 +812,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &292905594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292905595}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292905595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292905594}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.8942966, y: -1.5357523, z: -6.3203125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319810643
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 319810644}
     to: {fileID: 1116140992}
@@ -840,6 +883,7 @@ MonoBehaviour:
   - from: {fileID: 319810644}
     to: {fileID: 95826158}
   index: 11
+  walkable: 1
 --- !u!65 &319810645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -945,6 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 320619170}
     to: {fileID: 194074447}
@@ -955,6 +1000,7 @@ MonoBehaviour:
   - from: {fileID: 320619170}
     to: {fileID: 2009804995}
   index: 8
+  walkable: 1
 --- !u!65 &320619171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1060,6 +1106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 402199470}
     to: {fileID: 1409227675}
@@ -1070,6 +1117,7 @@ MonoBehaviour:
   - from: {fileID: 402199470}
     to: {fileID: 95826158}
   index: 9
+  walkable: 1
 --- !u!65 &402199471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1175,6 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 486982134}
     to: {fileID: 1273872225}
@@ -1185,6 +1234,7 @@ MonoBehaviour:
   - from: {fileID: 486982134}
     to: {fileID: 1065524468}
   index: 3
+  walkable: 1
 --- !u!65 &486982135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1290,6 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 563649455}
     to: {fileID: 1783303086}
@@ -1298,6 +1349,7 @@ MonoBehaviour:
   - from: {fileID: 563649455}
     to: {fileID: 2129462814}
   index: 23
+  walkable: 1
 --- !u!65 &563649456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1403,6 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1065524468}
     to: {fileID: 1640906995}
@@ -1411,6 +1464,7 @@ MonoBehaviour:
   - from: {fileID: 1065524468}
     to: {fileID: 1881106428}
   index: 18
+  walkable: 1
 --- !u!65 &1065524469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1498,6 +1552,8 @@ GameObject:
   - component: {fileID: 1078484525}
   - component: {fileID: 1078484524}
   - component: {fileID: 1078484529}
+  - component: {fileID: 1078484530}
+  - component: {fileID: 1078484531}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1543,9 +1599,9 @@ MonoBehaviour:
   - {fileID: 563649455}
   - {fileID: 1783303086}
   - {fileID: 1506292116}
-  Source: {fileID: 1522762959}
-  Target: {fileID: 1116140992}
-  dFS: {fileID: 1078484529}
+  bfs: {fileID: 1078484531}
+  RouteCalculated: 0
+  PathCalculated: 0
 --- !u!136 &1078484525
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1614,7 +1670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078484523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.2, y: -4.9, z: -2.2613888}
+  m_LocalPosition: {x: 0.05, y: 6.51, z: 4.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1634,7 +1690,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Route: 
   Visited: 
+  CalculatedPath: 
   Map: {fileID: 1078484524}
+--- !u!114 &1078484530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078484523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fdd8971ae5cadc4f807a06f6df5a065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PathRecieved: 0
+  SourceNode: {fileID: 486982134}
+--- !u!114 &1078484531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078484523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cfea0d83ae76e64c81609a0d868f1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CalculatedPath: 
 --- !u!1 &1080101648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1080101649}
     to: {fileID: 39588431}
@@ -1675,6 +1760,7 @@ MonoBehaviour:
   - from: {fileID: 1080101649}
     to: {fileID: 1522762959}
   index: 1
+  walkable: 1
 --- !u!65 &1080101650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1780,6 +1866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1116140992}
     to: {fileID: 280484400}
@@ -1788,6 +1875,7 @@ MonoBehaviour:
   - from: {fileID: 1116140992}
     to: {fileID: 319810644}
   index: 12
+  walkable: 1
 --- !u!65 &1116140993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1893,6 +1981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1273872225}
     to: {fileID: 95826158}
@@ -1903,6 +1992,7 @@ MonoBehaviour:
   - from: {fileID: 1273872225}
     to: {fileID: 486982134}
   index: 2
+  walkable: 1
 --- !u!65 &1273872226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2008,6 +2098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1409227675}
     to: {fileID: 2129462814}
@@ -2018,6 +2109,7 @@ MonoBehaviour:
   - from: {fileID: 1409227675}
     to: {fileID: 280484400}
   index: 14
+  walkable: 1
 --- !u!65 &1409227676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2123,12 +2215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1506292116}
     to: {fileID: 1783303086}
   - from: {fileID: 1506292116}
     to: {fileID: 273248720}
   index: 25
+  walkable: 1
 --- !u!65 &1506292117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2234,6 +2328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1522762959}
     to: {fileID: 1080101649}
@@ -2242,6 +2337,7 @@ MonoBehaviour:
   - from: {fileID: 1522762959}
     to: {fileID: 1640906995}
   index: 0
+  walkable: 1
 --- !u!65 &1522762960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2347,6 +2443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1560098451}
     to: {fileID: 2009804995}
@@ -2357,6 +2454,7 @@ MonoBehaviour:
   - from: {fileID: 1560098451}
     to: {fileID: 194074447}
   index: 16
+  walkable: 1
 --- !u!65 &1560098452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2462,12 +2560,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1640906995}
     to: {fileID: 1522762959}
   - from: {fileID: 1640906995}
     to: {fileID: 1065524468}
   index: 17
+  walkable: 1
 --- !u!65 &1640906996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2541,6 +2641,98 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1738012609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738012613}
+  - component: {fileID: 1738012612}
+  - component: {fileID: 1738012611}
+  - component: {fileID: 1738012610}
+  m_Layer: 0
+  m_Name: target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1738012610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738012609}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1738012611
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738012609}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1738012612
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738012609}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1738012613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738012609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -43.94911, y: -57.785152, z: 2.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783303085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1783303086}
     to: {fileID: 563649455}
@@ -2581,6 +2774,7 @@ MonoBehaviour:
   - from: {fileID: 1783303086}
     to: {fileID: 1506292116}
   index: 24
+  walkable: 1
 --- !u!65 &1783303087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2686,6 +2880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 1881106428}
     to: {fileID: 1065524468}
@@ -2694,6 +2889,7 @@ MonoBehaviour:
   - from: {fileID: 1881106428}
     to: {fileID: 273248720}
   index: 19
+  walkable: 1
 --- !u!65 &1881106429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2882,6 +3078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 2009804995}
     to: {fileID: 320619170}
@@ -2892,6 +3089,7 @@ MonoBehaviour:
   - from: {fileID: 2009804995}
     to: {fileID: 1881106428}
   index: 7
+  walkable: 1
 --- !u!65 &2009804996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2997,6 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 2129462814}
     to: {fileID: 563649455}
@@ -3005,6 +3204,7 @@ MonoBehaviour:
   - from: {fileID: 2129462814}
     to: {fileID: 27161408}
   index: 22
+  walkable: 1
 --- !u!65 &2129462815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3110,12 +3310,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6188f60bae024a866c71fad3457b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 4
   AdjacencyList:
   - from: {fileID: 2143332709}
     to: {fileID: 319810644}
   - from: {fileID: 2143332709}
     to: {fileID: 39588431}
   index: 10
+  walkable: 1
 --- !u!65 &2143332710
 BoxCollider:
   m_ObjectHideFlags: 0

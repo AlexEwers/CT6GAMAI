@@ -7,6 +7,7 @@ public class GraphNode : MonoBehaviour
     public float cost = 4;
     public GraphEdge[] AdjacencyList;
     public int index;
+    public bool walkable;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,10 @@ public class GraphNode : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawLine(item.from.transform.position, item.to.transform.position);
         }
+
     }
+
+
     // Update is called once per frame
     void Update()
     {
