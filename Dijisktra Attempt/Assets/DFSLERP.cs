@@ -32,7 +32,7 @@ public class DFSLERP : MonoBehaviour
         {
             bool a = false;
             if (SourceNode)
-                a = Graph.Map.Dfs.CalculateRoute(SourceNode, Graph.Map.Nodes[22]);
+                a = Graph.Map.Dfs.CalculateRoute(SourceNode, Graph.Map.Nodes[24]);
             if (a)
             {
                 PathRecieved = true;

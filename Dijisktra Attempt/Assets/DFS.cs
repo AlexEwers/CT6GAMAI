@@ -9,7 +9,7 @@ public class DFS : MonoBehaviour
     public List<int> Route = new List<int>(); //List of Integers from one node to the other
     public List<bool> Visited = new List<bool>(); //Stores if they have been stored or not
     public List<int> CalculatedPath = new List<int>();  //Makes Path work
-    public Graph Map;
+    
     public List<int> CalculatePath(GraphNode Source, GraphNode Target) //Coding the route
     {
         List<int> Path = new List<int>();
@@ -25,9 +25,9 @@ public class DFS : MonoBehaviour
     public bool CalculateRoute(GraphNode Source, GraphNode Target)
     {
         Stack<GraphEdge> graphEdges = new Stack<GraphEdge>(); //Thats the stack
-        Route = new List<int>(Map.Nodes.Count);
-        Visited = new List<bool>(Map.Nodes.Count);
-        for (int i = 0; i < Map.Nodes.Count; i++)// Looping through the map node
+        Route = new List<int>(Graph.Map.Nodes.Count);
+        Visited = new List<bool>(Graph.Map.Nodes.Count);
+        for (int i = 0; i < Graph.Map.Nodes.Count; i++)// Looping through the map node
         {
             Route.Add(-10);
             Visited.Add(false); //This initalises both the lists, 
@@ -40,8 +40,6 @@ public class DFS : MonoBehaviour
             GraphEdge edge = graphEdges.Pop();
             Route[edge.to.index] = edge.from.index;
             Visited[edge.to.index] = true;
-            for (int i = 0; i < Source.AdjacencyList.Length; i++) //Attempting LIFO, Arrays have .length rather than .count
-                Visited[edge.to.index] = true;
 
             if (edge.to.index == Target.index)
             {

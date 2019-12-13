@@ -39,7 +39,5 @@ public class LERP : MonoBehaviour
                     Targets.Add(Graph.Map.Nodes[item].transform.position);
             }
         }
-
-        Debug.DrawRay(transform.position, forward, Color.green);
     }
 }
