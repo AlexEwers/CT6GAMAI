@@ -16,7 +16,6 @@ public class LERP : MonoBehaviour
         if (Targets.Count > 0)
         {
             for (var i = 0; i < Graph.Map.bfs.CalculatedPath.Count - 1; i++)
-                Debug.DrawLine(Graph.Map.Nodes[i].transform.position, Graph.Map.Nodes[i + 1].transform.position);
             this.transform.position = Vector3.Lerp(transform.position, Targets[0], Time.smoothDeltaTime);
             if (Vector3.Distance(transform.position, Targets[0]) < 0.5f)
                 Targets.Remove(Targets[0]);
